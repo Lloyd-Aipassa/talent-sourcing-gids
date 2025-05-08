@@ -211,6 +211,11 @@ footer {
   margin-top: 2rem;
 }
 
+footer a {
+ text-decoration: none;
+  color: var(--black);
+}
+
 @media (max-width: 1440px) {
   .floating-menu ul {
     width: 180px;
