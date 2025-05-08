@@ -223,6 +223,36 @@ footer {
   }
 }
 
+.sourcing-maturity-curve .card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--white);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.sourcing-maturity-curve .card h3{
+  font-size: var(--Heading-three);
+  color: var(--orange-prime);
+  margin-bottom: 12px;
+}
+.sourcing-maturity-curve .card a{
+  text-decoration: none;
+  color: var(--white);
+  font-size: var(--paragraph);
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  position: relative;
+  transition: all 0.3s ease;
+  background-color: var(--orange-tertiary);
+  margin-top: 24px;
+  border-radius: 8px;
+}
+
 @media (max-width: 1240px) {
   .floating-menu {
     display: none !important;
@@ -270,9 +300,7 @@ footer {
   header {
     padding: 12px 24px;
   }
-  section {
-    padding: 40px 24px;
-  }
+
 
   h1 {
     font-size: var(--Mobile-Heading-one);
@@ -302,6 +330,7 @@ footer {
 
   img.logo {
     width: 50px;
+    height: auto;
   }
 
   .hero-container {
