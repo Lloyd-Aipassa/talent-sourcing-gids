@@ -11,7 +11,7 @@
     <link rel="icon" href="/favicon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="/styles/style.css" />
     <link rel="stylesheet" href="/styles/main-style.css" />
-    <link href="https://talent-sourcing-gids.nl" rel="canonical">
+    <link href="https://talent-sourcing-gids.nl" rel="canonical" />
   </head>
 
   <body>
@@ -607,64 +607,14 @@
       </p>
     </footer>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const toggleButton = document.getElementById('mobileMenuToggle');
-        const nav = document.getElementById('mobileNav');
-        nav.style.transition = 'transform 0.3s ease-in-out';
-
-        let isOpen = false;
-
-        toggleButton.addEventListener('click', () => {
-          if (isOpen) {
-            nav.style.transform = 'translateX(-100%)';
-          } else {
-            nav.style.transform = 'translateX(0)';
-          }
-          isOpen = !isOpen;
-        });
-      });
-    </script>
-
+    <script src="/js/mobileMenu.js"></script>
     <script>
       const year = new Date().getFullYear();
       document.getElementById('year').innerText = year;
     </script>
-
-    <script>
-      window.addEventListener('scroll', function () {
-        const menu = document.querySelector('.floating-menu');
-
-        if (window.scrollY > 3559) {
-          menu.classList.remove('visible-white');
-          menu.classList.add('visible');
-        } else if (window.scrollY > 1520) {
-          menu.classList.remove('visible');
-          menu.classList.add('visible-white');
-        } else if (window.scrollY > 820) {
-          menu.classList.remove('visible-white');
-          menu.classList.add('visible');
-        } else {
-          menu.classList.remove('visible', 'visible-white');
-        }
-      });
-    </script>
-
+    <script src="/js/floatingMenu.js"></script>
     <script src="/js/gsap.min.js"></script>
     <script src="/js/SplitText.min.js"></script>
-    <script>
-      gsap.registerPlugin(SplitText);
-      let split = SplitText.create('h1', {
-        type: 'chars, words, lines',
-      });
-
-      gsap.from(split.chars, {
-        duration: 0.5,
-        opacity: 0,
-        y: 80,
-        stagger: 0.1,
-        ease: 'power2.out',
-      });
-    </script>
+    <script src="/js/gsapAnimations.js"></script>
   </body>
 </html>
