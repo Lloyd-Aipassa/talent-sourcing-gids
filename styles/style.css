@@ -384,4 +384,13 @@ footer a {
     height: auto;
     padding-bottom: 0;
   }
+
+  footer {
+  text-align: center;
+  padding: 2rem 0 3rem;
+  font-size: var(--paragraph);
+  color: var(--grey);
+  border-top: 1px solid #eee;
+  margin-top: 2rem;
+}
 }
