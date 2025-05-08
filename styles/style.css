@@ -1,4 +1,5 @@
 :root {
+  /* kleuren */
   --orange-prime: #f4bb78;
   --orange-secondary: #fddbb233;
   --orange-tertiary: #e98615;
@@ -7,6 +8,7 @@
   --grey: #555;
   --black: #1d1d1d;
 
+  /* fonts */
   --Heading-one: 2.5rem;
   --Heading-two: 2rem;
   --Heading-three: 1.5rem;
@@ -18,6 +20,7 @@
   --paragraph: 1rem;
   --Mobile-paragraph: 0.9rem;
 
+  /* line heights */
   --lineheight-h1: 100%;
   --lineheight-h2: 100%;
   --lineheight-h3: 105%;
@@ -53,6 +56,7 @@ header {
 }
 
 h1 {
+  color: var(--orange-prime);
   font-size: var(--Heading-one);
   line-height: var(--lineheight-h1);
   margin-bottom: 24px;
@@ -83,21 +87,8 @@ p {
   text-wrap: pretty;
 }
 
-/* Hamburger knop */
-#mobileMenuToggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
 nav {
   width: 100%;
-}
-
-#mobileNav {
-  display: none;
 }
 
 nav ul {
@@ -115,24 +106,18 @@ nav a {
   position: relative;
 }
 
-nav a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0%;
-  height: 2px;
-  background-color: var(--orange-prime);
-  transition: width 0.3s ease-in-out;
+/* Hamburger knop */
+#mobileMenuToggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
-nav a:hover::after {
-  width: 100%;
+#mobileNav {
+  display: none;
 }
-
-/* main {
-  padding: 2rem 0;
-} */
 
 .hero-container {
   max-width: 1200px;
@@ -143,30 +128,10 @@ nav a:hover::after {
   padding: 120px 0;
 }
 
-.hero-image-container,
-.hoe-image-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  border-radius: 25px;
-  border-bottom-right-radius: 8px;
-  overflow: hidden;
-  border: 2px solid #1d1d1d;
-  background-color: #1d1d1d;
-  padding-right: 12px;
-  padding-bottom: 5px;
-}
 
-.hero-image-container img,
-.hoe-image-container img {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-  border-bottom-right-radius: 5px;
-}
 
-strong {
-  display: block;
-  margin-top: 12px;
+.manieren-talent-sourcen {
+  position: relative;
 }
 
 .manieren-talent-sourcen li {
@@ -276,70 +241,6 @@ footer {
   nav ul {
     flex-direction: row;
   }
-}
-
-/* main styles */
-section {
-  padding: 120px 0;
-}
-
-.section-container-med {
-  max-width: 800px;
-}
-.section-container-large {
-  max-width: 1200px;
-}
-
-.section-container-large,
-.section-container-med {
-  z-index: 2;
-  margin: 0px auto;
-}
-
-.color-container {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 218, 187, 0.5) 100%);
-}
-
-.background-orange {
-  background-color: var(--orange-secondary);
-}
-
-.background-white {
-  position: relative;
-  background: var(--background-white);
-  z-index: 2;
-  padding: 20px;
-}
-
-.background-orange p,
-.background-orange h3,
-.background-orange h2 {
-  color: var(--black);
-}
-
-.intro-section {
-  position: relative;
-  overflow: hidden;
-}
-
-.intro-section::after,
-.manieren-talent-sourcen::after,
-.manieren-talent-sourcen::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(var(--orange-prime) 1px, transparent 1px);
-  background-size: 20px 20px;
-  opacity: 0.6;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.manieren-talent-sourcen {
-  position: relative;
 }
 
 @media (max-width: 767px) {
