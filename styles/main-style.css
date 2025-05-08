@@ -60,7 +60,6 @@ strong {
   position: relative;
   background: var(--background-white);
   z-index: 2;
-  padding: 20px;
 }
 
 .background-orange p,
