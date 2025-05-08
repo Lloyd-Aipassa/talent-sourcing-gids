@@ -1,8 +1,28 @@
 :root {
-  --accent: #f4bb78;
-  --accent2: #fddbb233;
-  --background: #fff;
-  --text: #333;
+  --orange-prime: #f4bb78;
+  --orange-secondary: #fddbb233;
+  --orange-tertiary: #e98615;
+  --background-white: #fff;
+  --white: #fff;
+  --grey: #555;
+  --black: #1d1d1d;
+
+  --Heading-one: 2.5rem;
+  --Heading-two: 2rem;
+  --Heading-three: 1.5rem;
+  --Heading-four: 1.2rem;
+  --Mobile-Heading-one: 2rem;
+  --Mobile-Heading-two: 1.5rem;
+  --Mobile-Heading-three: 1.3rem;
+  --Mobile-Heading-four: 1rem;
+  --paragraph: 1rem;
+  --Mobile-paragraph: 0.9rem;
+
+  --lineheight-h1: 100%;
+  --lineheight-h2: 100%;
+  --lineheight-h3: 105%;
+  --lineheight-h4: 110%;
+  --lineheight-p: 1.625rem;
 }
 
 * {
@@ -18,9 +38,8 @@ html {
 body {
   font-family: 'Segoe UI', sans-serif;
   font-weight: 400;
-  line-height: 1.6;
-  background-color: #fff;
-  color: #1d1d1d;
+  background-color: var(--background-white);
+  color: var(--black);
 }
 
 header {
@@ -29,16 +48,39 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f4bb78;
+  background-color: var(--orange-prime);
   overflow: hidden;
 }
 
-section h1 {
-  font-size: 2.5rem;
-  color: #1d1d1d;
-  color: var(--accent);
-  line-height: 100%;
+h1 {
+  font-size: var(--Heading-one);
+  line-height: var(--lineheight-h1);
   margin-bottom: 24px;
+}
+
+h2 {
+  font-size: var(--Heading-two);
+  color: var(--black);
+  margin-bottom: 12px;
+}
+h3 {
+  font-size: var(--Heading-three);
+  color: var(--black);
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: var(--paragraph);
+  color: var(--black);
+  line-height: 26px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  text-wrap: pretty;
 }
 
 /* Hamburger knop */
@@ -67,7 +109,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #1d1d1d;
+  color: var(--black);
   font-size: 14px;
   font-weight: 400;
   position: relative;
@@ -80,7 +122,7 @@ nav a::after {
   bottom: -2px;
   width: 0%;
   height: 2px;
-  background-color: #f4bb78;
+  background-color: var(--orange-prime);
   transition: width 0.3s ease-in-out;
 }
 
@@ -91,23 +133,6 @@ nav a:hover::after {
 /* main {
   padding: 2rem 0;
 } */
-
-section h2 {
-  font-size: 2rem;
-  color: #1d1d1d;
-  margin-bottom: 12px;
-}
-section h3 {
-  font-size: 1.5rem;
-  color: #1d1d1d;
-  margin-bottom: 12px;
-}
-
-section p {
-  font-size: 1rem;
-  color: #1d1d1d;
-  text-wrap: pretty;
-}
 
 .hero-container {
   max-width: 1200px;
@@ -125,8 +150,8 @@ section p {
   border-radius: 25px;
   border-bottom-right-radius: 8px;
   overflow: hidden;
-  border: 2px solid #000;
-  background-color: black;
+  border: 2px solid #1d1d1d;
+  background-color: #1d1d1d;
   padding-right: 12px;
   padding-bottom: 5px;
 }
@@ -163,8 +188,8 @@ strong {
   height: 400px;
   border-radius: 25px;
   border-bottom-right-radius: 8px;
-  border: 2px solid #000;
-  background-color: black;
+  border: 2px solid #1d1d1d;
+  background-color: #1d1d1d;
   padding-right: 10px;
   padding-bottom: 10px;
   overflow: hidden;
@@ -201,7 +226,7 @@ strong {
 }
 
 .floating-menu.visible-white a {
-  color: #e98615;
+  color: var(--orange-tertiary);
   transition: all 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
 }
 
@@ -217,8 +242,8 @@ strong {
 footer {
   text-align: center;
   padding: 2rem 0 1rem;
-  font-size: 0.9rem;
-  color: #555;
+  font-size: var(--paragraph);
+  color: var(--grey);
   border-top: 1px solid #eee;
   margin-top: 2rem;
 }
@@ -276,12 +301,12 @@ section {
 }
 
 .background-orange {
-  background-color: var(--accent2);
+  background-color: var(--orange-secondary);
 }
 
 .background-white {
   position: relative;
-  background: var(--background);
+  background: var(--background-white);
   z-index: 2;
   padding: 20px;
 }
@@ -289,7 +314,7 @@ section {
 .background-orange p,
 .background-orange h3,
 .background-orange h2 {
-  color: #1d1d1d;
+  color: var(--black);
 }
 
 .intro-section {
@@ -306,7 +331,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(var(--accent) 1px, transparent 1px);
+  background-image: radial-gradient(var(--orange-prime) 1px, transparent 1px);
   background-size: 20px 20px;
   opacity: 0.6;
   pointer-events: none;
@@ -318,22 +343,22 @@ section {
 }
 
 @media (max-width: 767px) {
-header{
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
+  header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
   #mainNav {
     display: none;
   }
 
-  #mobileNav{
+  #mobileNav {
     display: block;
     position: fixed;
     top: 68px;
     left: 0;
-    background-color: #fff;
+    background-color: var(--background-white);
     width: 50%;
     height: calc(100svh - 70px);
     z-index: 1000;
@@ -348,16 +373,22 @@ header{
     padding: 40px 24px;
   }
 
-  section h1 {
-    font-size: 2rem;
+  h1 {
+    font-size: var(--Mobile-Heading-one);
+    margin-bottom: 12px;
   }
-  section h2 {
-    font-size: 1.5rem;
-    line-height: 100%;
+  h2 {
+    font-size: var(--Mobile-Heading-two);
+    line-height: var(--lineheight-h2);
   }
-  section h3 {
-    font-size: 1.3rem;
-    line-height: 100%;
+  h3 {
+    font-size: var(--Mobile-Heading-three);
+    line-height: var(--lineheight-h3);
+  }
+
+  p {
+    font-size: var(--Mobile-paragraph);
+    line-height: var(--lineheight-p);
   }
 
   .background-white {
