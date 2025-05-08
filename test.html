@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Talent sourcing gids. Altijd afgevraagd wat talent sourcing is? Hier vind je een volledige gids met alle ins and outs over dit vakgebied" />
+    <title>Talent Sourcing Gids</title>
+    <link rel="icon" href="/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      :root {
+        --accent: #f4bb78;
+        --background: #fefdfb;
+        --text: #333;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: var(--background);
+        color: var(--text);
+        overflow-x: hidden;
+      }
+
+      header {
+        background-color: var(--accent);
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      #mobileMenuToggle {
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      nav {
+        background: white;
+        transition: max-height 0.3s ease;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: var(--text);
+        padding: 0.5rem 0;
+        display: block;
+      }
+
+      nav a:hover {
+        color: var(--accent);
+      }
+
+      #mainNav {
+        overflow: hidden;
+        max-height: 0;
+      }
+
+      #mainNav.open {
+        max-height: 300px;
+      }
+
+      @media (min-width: 768px) {
+        #mobileMenuToggle {
+          display: none;
+        }
+        #mainNav {
+          max-height: none;
+          overflow: visible;
+        }
+        nav ul {
+          flex-direction: row;
+          gap: 2rem;
+          justify-content: center;
+        }
+      }
+
+      .hero-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 4rem 2rem;
+        align-items: center;
+        background: #fff;
+        gap: 3rem;
+      }
+
+      .hero-section h1 {
+        font-size: 2.5rem;
+        color: var(--accent);
+      }
+
+      .hero-image-container{
+        max-width: 1000px;
+      }
+
+      .hero-section img {
+        width: 100%;
+        height: auto;
+      }
+
+      .content-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 3rem;
+        padding: 4rem 2rem;
+        background-color: #fff;
+      }
+
+      .card {
+        background-color: #fff;
+        border-radius: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .card h2 {
+        color: var(--accent);
+        font-size: 1.4rem;
+      }
+
+      .card img {
+        width: 100%;
+        border-radius: 0.5rem;
+      }
+
+      footer {
+        background-color: var(--accent);
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        margin-top: 4rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <span><strong>Talent Sourcing Gids</strong></span>
+      <button id="mobileMenuToggle" aria-label="Menu openen/sluiten">☰</button>
+    </header>
+
+    <nav id="mainNav">
+      <ul>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#week">Week</a></li>
+        <li><a href="#methoden">Methoden</a></li>
+        <li><a href="#curve">Maturity Curve</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero-section" id="intro">
+      <div>
+        <h1>Talent sourcing gids</h1>
+        <p>Altijd al willen weten wat een Talent Sourcer doet, hoe het verschilt van recruitment en waarom het essentieel is in moderne organisaties? Ontdek het hier!</p>
+      </div>
+      <img src="/images/hero.avif" alt="Visual talent sourcing" />
+    </section>
+
+    <section class="content-section" id="week">
+      <div class="card">
+        <h2>Maandag – Strategische Start</h2>
+        <p>Intake met hiring managers, doelgroepanalyse en eerste longlist opstellen.</p>
+      </div>
+      <div class="card">
+        <h2>Dinsdag – Outreach</h2>
+        <p>Persoonlijke, multichannel outreach met A/B-testen.</p>
+      </div>
+      <div class="card">
+        <h2>Woensdag – Kwalificatie</h2>
+        <p>Pre-screenings, motivatiecheck en afstemming met recruitment.</p>
+      </div>
+      <div class="card">
+        <h2>Donderdag – Talentpools</h2>
+        <p>Talentpools bouwen, alternatieve bronnen verkennen en content schrijven.</p>
+      </div>
+      <div class="card">
+        <h2>Vrijdag – Analyse</h2>
+        <p>Data-analyse, optimalisatie en persoonlijke ontwikkeling.</p>
+      </div>
+    </section>
+
+    <section class="content-section" id="methoden">
+      <div class="card">
+        <h2>Methoden</h2>
+        <ul>
+          <li>Banenbeurzen & evenementen</li>
+          <li>Sociale netwerken zoals LinkedIn</li>
+          <li>Medewerker-aanbevelingen</li>
+          <li>Vacaturebanken</li>
+          <li>Sourcingsoftware</li>
+          <li>Community outreach</li>
+          <li>DE&I-evenementen</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section" id="curve">
+      <div class="card">
+        <h2>Sourcing Maturity Curve</h2>
+        <img src="/images/smc.avif" alt="Sourcing maturity curve" />
+        <p>
+          Waar staat jouw organisatie? Van reactief naar innovatief sourcen: ontdek de 5 fasen van volwassenheid en hoe je elk niveau kunt benutten om slimmer talent aan te trekken.
+        </p>
+        <ul>
+          <li>Fase 1 - Reactief</li>
+          <li>Fase 2 - Operationeel Gestuurd</li>
+          <li>Fase 3 - Strategisch Geïntegreerd</li>
+          <li>Fase 4 - Voorspellend en Data-driven</li>
+          <li>Fase 5 - Innovatief en Transformatief</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Jouw Naam. Alle rechten voorbehouden.</p>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const toggle = document.getElementById('mobileMenuToggle');
+        const nav = document.getElementById('mainNav');
+        toggle.addEventListener('click', () => {
+          nav.classList.toggle('open');
+        });
+      });
+    </script>
+  </body>
+</html>
