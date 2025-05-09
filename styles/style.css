@@ -212,7 +212,7 @@ footer {
 }
 
 footer a {
- text-decoration: none;
+  text-decoration: none;
   color: var(--black);
 }
 
@@ -258,9 +258,9 @@ footer a {
   align-items: center;
   gap: 10px;
   box-shadow: 0 6px 0 #1d2a42;
-  font-family: 'Cera Round Pro DEMO', sans-serif;     
+  font-family: 'Cera Round Pro DEMO', sans-serif;
   display: flex;
-  align-items: center;                               
+  align-items: center;
 }
 
 .sourcing-maturity-curve .card a img {
@@ -299,6 +299,7 @@ footer a {
     top: 0;
     left: 0;
     z-index: 1001;
+    overflow: hidden;
   }
   #mainNav {
     display: none;
@@ -315,6 +316,9 @@ footer a {
     z-index: 1000;
     padding: 24px;
     transform: translateX(-100%);
+  }
+  #mobileNav a {
+    color: red;
   }
 
   header {
@@ -386,11 +390,11 @@ footer a {
   }
 
   footer {
-  text-align: center;
-  padding: 2rem 0 3rem;
-  font-size: var(--paragraph);
-  color: var(--grey);
-  border-top: 1px solid #eee;
-  margin-top: 2rem;
-}
+    text-align: center;
+    padding: 2rem 0 3rem;
+    font-size: var(--paragraph);
+    color: var(--grey);
+    border-top: 1px solid #eee;
+    margin-top: 2rem;
+  }
 }
