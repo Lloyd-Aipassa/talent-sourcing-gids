@@ -313,7 +313,7 @@ footer a {
     left: 0;
     background-color: var(--background-white);
     width: 50%;
-    height: calc(100vh - 70px);
+    height: 100vh;
     z-index: 1000;
     padding: 24px;
     transform: translateX(-100%);
