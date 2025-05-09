@@ -298,7 +298,7 @@ footer a {
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 1001;
   }
   #mainNav {
     display: none;
@@ -311,7 +311,7 @@ footer a {
     left: 0;
     background-color: var(--background-white);
     width: 50%;
-    height: calc(100svh - 70px);
+    height: calc(100vh - 10px);
     z-index: 1000;
     padding: 24px;
     transform: translateX(-100%);
