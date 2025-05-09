@@ -300,6 +300,7 @@ footer a {
     left: 0;
     z-index: 1001;
     overflow: hidden;
+    height: 70px;
   }
   #mainNav {
     display: none;
@@ -308,17 +309,22 @@ footer a {
   #mobileNav {
     display: block;
     position: fixed;
-    top: 68px;
+    bottom: 0;
     left: 0;
     background-color: var(--background-white);
     width: 50%;
-    height: calc(100vh - 10px);
+    height: calc(100svh - 70px);
     z-index: 1000;
     padding: 24px;
     transform: translateX(-100%);
   }
+  #mobileNav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
   #mobileNav a {
-    color: red;
+    color: var(--orange-prime);
   }
 
   header {
