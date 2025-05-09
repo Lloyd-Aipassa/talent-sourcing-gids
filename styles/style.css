@@ -312,18 +312,49 @@ footer a {
     bottom: 0;
     left: 0;
     background-color: var(--background-white);
-    width: 50%;
+    width: 100%;
     height: 100vh;
     z-index: 1000;
-    padding:80px 24px 24px;
+    padding: 80px 24px 24px;
     transform: translateX(-100%);
   }
-  #mobileNav ul{
+  .overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    content: '';
+    z-index: 999;
+    width: 100%;
+  }
+  #mobileNav .top {
+    width: 100%;
+    background-color: var(--orange-prime);
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 24px;
+  }
+
+  #mobileNav button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--black);
+    cursor: pointer;
+  }
+  #mobileNav img {
+    align-self: center;
+  }
+  #mobileNav ul {
     display: flex;
     flex-direction: column;
-    
     gap: 20px;
   }
+
   #mobileNav a {
     color: var(--orange-prime);
     font-size: var(--Mobile-Heading-three);

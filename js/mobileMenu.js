@@ -1,16 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const toggleButton = document.getElementById('mobileMenuToggle');
+  const openButton = document.getElementById('mobileMenuToggle');
+  const closeButton = document.getElementById('mobileMenuClose');
   const nav = document.getElementById('mobileNav');
-  nav.style.transition = 'transform 0.3s ease-in-out';
+  const overlay = document.querySelector('.overlay');
+  nav.style.transition = 'transform 0.5s ease-in-out';
 
-  let isOpen = false;
+  openButton.addEventListener('click', () => {
+    nav.style.transform = 'translateX(0)';
+    overlay.style.display = 'block';
+  });
 
-  toggleButton.addEventListener('click', () => {
-    if (isOpen) {
+  closeButton.addEventListener('click', () => {
+    nav.style.transform = 'translateX(-100%)';
+    overlay.style.display = 'none';
+  });
+
+  document.querySelectorAll('#mobileNav a').forEach((link) => {
+    link.addEventListener('click', () => {
       nav.style.transform = 'translateX(-100%)';
-    } else {
-      nav.style.transform = 'translateX(0)';
-    }
-    isOpen = !isOpen;
+      overlay.style.display = 'none';
+      isOpen = false;
+    });
   });
 });
