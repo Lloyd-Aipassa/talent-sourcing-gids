@@ -315,16 +315,18 @@ footer a {
     width: 50%;
     height: 100vh;
     z-index: 1000;
-    padding: 24px;
+    padding:80px 24px 24px;
     transform: translateX(-100%);
   }
   #mobileNav ul{
     display: flex;
     flex-direction: column;
+    
     gap: 20px;
   }
   #mobileNav a {
     color: var(--orange-prime);
+    font-size: var(--Mobile-Heading-three);
   }
 
   header {
