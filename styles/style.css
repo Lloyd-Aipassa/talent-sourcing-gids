@@ -360,6 +360,9 @@ footer a {
     font-size: var(--Mobile-Heading-three);
     padding-left: 24px;
   }
+  #mobileNav a.top-link {
+   margin-top: 50px;
+  }
 
   header {
     padding: 12px 24px;
@@ -389,6 +392,9 @@ footer a {
 
   #mobileMenuToggle {
     display: block;
+    position: fixed;
+    top: 12px;
+    right: 24px;
   }
 
   img.logo {
