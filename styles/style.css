@@ -333,7 +333,7 @@ footer a {
     height: 70px;
     display: flex;
     justify-content: space-between;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     padding: 0 24px;
