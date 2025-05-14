@@ -3,6 +3,7 @@
   --orange-prime: #f4bb78;
   --orange-secondary: #fddbb233;
   --orange-tertiary: #e98615;
+  --link:#c78a58;
   --background-white: #fff;
   --white: #fff;
   --grey: #555;
@@ -379,10 +380,6 @@ footer a {
   p {
     font-size: var(--Mobile-paragraph);
     line-height: var(--lineheight-p);
-  }
-
-  .background-white {
-    padding: 0;
   }
 
   #mobileMenuToggle {
